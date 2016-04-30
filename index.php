@@ -65,6 +65,6 @@ try {
     $controller->init();
     $controller->$actionname();
 } catch (Exception $e) {
-    OutputManager::output(array('code'=>$e->getCode(),'message'=>$e->getMessage()),'json');
+    OutputManager::OutputJson(array('code'=>$e->getCode(),'message'=>$e->getMessage()));
 }
 

@@ -5,15 +5,6 @@ require_once dirname(__FILE__).'/medoo.php';
     base functions: query, insert, update, delete, count, sum
 */
 class MedooManager {
-    private static $default_db_config = array(
-        'database_type' => 'mysql',
-        'server' => '127.0.0.1',
-        'username' => 'root',
-        'password' => 'root',
-        'charset' => 'utf8',
-        'engine' => 'MyISAM',
-        'option' => array(PDO::MYSQL_ATTR_FOUND_ROWS=>TRUE),
-    );
     private static $db_config = array();
     private static $dbs = array();
 
@@ -212,14 +203,7 @@ class MedooManager {
 
     protected static function connect($dbname) {
         self::hasdb($dbname);
-        if (!isset(self::$dbs[$dbname])) {
-            foreach (self::$default_db_config as $key=>$value) {
-                if (!isset(self::$db_config[$dbname][$key])) {
-                    self::$db_config[$dbname][$key] = $value;
-                }
-            }
-            self::$dbs[$dbname] = new Medoo(self::$db_config[$dbname]);
-        }
+        self::$dbs[$dbname] = new Medoo(self::$db_config[$dbname]);
     }
 
     protected static function valid($dbname, $table, $datas) {

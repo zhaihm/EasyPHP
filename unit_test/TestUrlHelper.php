@@ -1,5 +1,5 @@
 <?php
-require_once("../init.php");
+require_once dirname(__FILE__)."/../init.php";
 
 class TestUrlHelper {
     public static function DoTest($argc, $argv, $commands, $common_params=array()) {

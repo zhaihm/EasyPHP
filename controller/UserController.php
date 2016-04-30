@@ -1,5 +1,5 @@
 <?php
-require_once "MyController.php";
+require_once dirname(__FILE__)."/../library/MyController.php";
 
 class UserController extends MyController {
     public function actionLogin() {

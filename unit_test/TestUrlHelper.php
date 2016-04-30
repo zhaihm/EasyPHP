@@ -20,18 +20,20 @@ class TestUrlHelper {
     }
 
     private static function Execute($info, $common_params) {
-        $attributes = array();
-        $info['params'] += $common_params;
-        foreach ($info['params'] as $key => $value) {
-            $attributes[] = $key . '=' . urlencode($value);
-        }
-        $url = $info['url'].'?'. implode($attributes, '&');
-        $html = CHttp::GetRequest($url, 'http', 10);
+        foreach ($info['params'] as $param) {
+            $attributes = array();
+            $param += $common_params;
+            foreach ($param as $key => $value) {
+                $attributes[] = $key . '=' . urlencode($value);
+            }
+            $url = $info['url'].'?'. implode($attributes, '&');
+            $html = CHttp::GetRequest($url, 'http', 10);
 
-        $json = json_decode($html);
-        //if (!isset($json) || $json->{'code'} != 0) {
-            echo $info['url']."\n".$html."\n\n";
-        //}
+            $json = json_decode($html);
+            //if (!isset($json) || $json->{'code'} != 0) {
+                echo $info['url']."\n".$html."\n\n";
+            //}
+        }
     }
 }
 

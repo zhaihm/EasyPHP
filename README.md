@@ -22,7 +22,7 @@ A controller could be added by adding a file to controller directory.
 An action could be added by adding a function to a related controller
 
 ### How to do unit test
-You could simply add your unit test file to **unit_test** directory. *$commands* stands for actions in controllers, now each action could have only one test case. *url* will be called when running unit test, and *params* will be passed into it.
+You could simply add your unit test file to **unit_test** directory. *$commands* stands for actions in controllers. Each item in *params* could be seen as a test case. *url* will be called when running unit test, and *params* will be passed into it.
 
 You should run command like this:
 

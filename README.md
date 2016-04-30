@@ -29,3 +29,7 @@ You should run command like this:
 `cd unit_test`
 
 `php test_user_url.php login`
+
+You could also run all test cases in one line:
+
+`php test_user_url.php all`

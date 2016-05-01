@@ -10,7 +10,7 @@ It uses a light-weight database interface called **Medoo**, which supports MySQL
 * **config:** where the config files locate
 * **controller:** where controllers locate
 * **library:** where the framework files locate, like DB and Memcache interfaces
-* **service:** service is a layer which implenments business logics used in more than one controller
+* **service:** service is a layer which implements business logics used in more than one controller
 * **sql:** exported sql scripts
 * **tools:** tools like DB cleaner, ...
 * **unit_test:** unit test files

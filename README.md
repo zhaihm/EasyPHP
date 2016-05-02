@@ -33,3 +33,5 @@ You should run command like this:
 You could also run all test cases in one line:
 
 `php test_user_url.php all`
+
+Then all tests will run automatically.

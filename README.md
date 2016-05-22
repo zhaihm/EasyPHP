@@ -15,13 +15,17 @@ It uses a light-weight database interface called **Medoo**, which supports MySQL
 * **tools:** tools like DB cleaner, ...
 * **unit_test:** unit test files
 
-### How to add controllers
+### Controllers & Actions
 A controller could be added by adding a file to controller directory.
 
-### How to add actions
 An action could be added by adding a function to a related controller
 
-### How to do unit test
+### Data Service
+Data service is used to access databases. Run following command to generate data service for database:
+
+`php tools/generate/generate.php service [dbname]`
+
+### Unit Test
 You could simply add your unit test file to **unit_test** directory. *$commands* stands for actions in controllers. Each item in *params* could be seen as a test case. *url* will be called when running unit test, and *params* will be passed into it.
 
 You should run command like this:
